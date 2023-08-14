@@ -42,6 +42,15 @@
         height: auto;
         margin: auto;
     }
+    skeleton-avatar { 
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: auto;
+        margin: auto;
+        
+    }
+    
     p:not(p.name) {
         color: #555;
         margin-bottom: 0;

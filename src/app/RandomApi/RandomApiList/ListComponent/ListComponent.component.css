@@ -4,3 +4,8 @@
     flex-wrap: wrap;
     align-items: center;
 }
+
+
+skeleton-avatar { 
+    float: left;
+}

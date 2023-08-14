@@ -1,9 +1,6 @@
 import { Component, Injectable, Input, OnInit, ViewChild } from '@angular/core';
-import { RandomApiService } from '../../RandomApiService';
-import { RandomDataModel } from '../../Model/RandomDataModel';
-import { MatTableDataSource, MatTableDataSourcePaginator } from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-CustomerCard',
@@ -19,6 +16,10 @@ export class CustomerCardComponent implements OnInit {
    }
 
   ngOnInit() { 
-    console.log(this.dataSource)
+  }
+
+  loadimg(idImage: string = ""){
+    const skeletonImage = document.getElementById(idImage) as HTMLImageElement;
+    skeletonImage.style.display = 'none';
   }
 }

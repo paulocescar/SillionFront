@@ -3,7 +3,10 @@
     <div class="cardContainer">
       <div class="details">
         <span>{{element.id}}</span>
-        <img src="{{element.avatar}}" alt="">
+        <img src="{{element.avatar}}" alt="" (load)="loadimg(element.id)">
+        <div>
+          <skeleton-avatar width="300px!important" height="300px!important" effect="wave" id="{{element.id}}"></skeleton-avatar>
+        </div>
         <p class="name">{{element.first_name}}</p>
         <p>E-mail: {{element.email}}</p>
         <p>Phone: {{element.phone_number}}</p>

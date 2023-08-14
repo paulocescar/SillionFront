@@ -21,5 +21,9 @@ export class ListComponentComponent implements OnInit {
 
   }
   
+  loadimg(idImage: string = ""){
+    const skeletonImage = document.getElementById(idImage) as HTMLImageElement;
+    skeletonImage.style.display = 'none';
+  }
 
 }

@@ -12,6 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
+import { SkeletonElementsModule } from 'skeleton-elements/angular';
+
 import { RandomApiComponent } from './RandomApi.component';
 import { RandomApiListComponent } from './RandomApiList/RandomApiList.component';
 import { RandomApiProfileComponent } from './RandomApiProfile/RandomApiProfile.component';
@@ -33,6 +35,7 @@ let routes = RouterModule.forChild([
     CommonModule,
     FormsModule,
     routes,
+    SkeletonElementsModule,
     MatSlideToggleModule,
     MatIconModule,
     HttpClientModule,
