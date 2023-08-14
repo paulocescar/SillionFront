@@ -1,0 +1,19 @@
+<div>
+    <ng-container>
+      <th mat-header-cell *matHeaderCellDef>Busca</th>
+      <div class="menuItems">
+        <mat-form-field>
+          <mat-label>Buscar por Nome</mat-label>
+          <input matInput [(ngModel)]="searchTerm" (keyup)="applyFilter($event)" placeholder="Digite o nome">
+        </mat-form-field>
+        <span>Card</span>
+          <mat-slide-toggle [aria-label]="listFormat" [(ngModel)]="listFormat">
+          </mat-slide-toggle>
+        <span>Lista</span>
+      </div>
+    </ng-container>
+    <app-CustomerCard *ngIf="!listFormat" [dataSource]="currentPageData"></app-CustomerCard>
+    <app-ListComponent *ngIf="listFormat" [dataSource]="dataSource"></app-ListComponent>
+</div>
+<mat-paginator [pageSize]="10" [pageSizeOptions]="[10, 20, 30, 40, 50, 100]" showFirstLastButtons
+  [length]="dataSource.filteredData.length" (page)="onPageChange($event)"></mat-paginator>

@@ -1,0 +1,16 @@
+<div class="container">
+  <div *ngFor="let element of this.dataSource; let i = index" [attr.data-index]="i">
+    <div class="cardContainer">
+      <div class="details">
+        <span>{{element.id}}</span>
+        <img src="{{element.avatar}}" alt="">
+        <p class="name">{{element.first_name}}</p>
+        <p>E-mail: {{element.email}}</p>
+        <p>Phone: {{element.phone_number}}</p>
+      </div>
+      <div class="action">
+        <button mat-button color="primary" routerLink="/">Details</button>
+      </div>
+    </div>
+  </div>
+</div>

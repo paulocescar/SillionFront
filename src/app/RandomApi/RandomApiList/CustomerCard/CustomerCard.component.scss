@@ -1,0 +1,56 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    background-color: #efefef;
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+.cardContainer{
+    display: block;
+    flex-direction: column;
+    width: 300px;
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 8px #ddd;
+    
+    div button{
+        padding-top: 0.5rem;
+        margin-top: 0.5rem;
+        border-top: 1px solid #ccc;
+        width: 100%;
+    }
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.15rem;
+
+    span {
+        background-color: orange;
+        max-width: max-content;
+        color: #fff;
+        padding: 0.25rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+    }
+    img {
+        width: 150px;
+        height: auto;
+        margin: auto;
+    }
+    p:not(p.name) {
+        color: #555;
+        margin-bottom: 0;
+    }
+
+    p.name {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
