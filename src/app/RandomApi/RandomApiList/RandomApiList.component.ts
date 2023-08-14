@@ -39,12 +39,16 @@ export class RandomApiListComponent implements OnInit {
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
+    this.initPageFilter();
     this.dataSource.filterPredicate = (data, filter) => {
       return data.first_name.toLowerCase().includes(filter);
     };
     this.dataSource.filter = filterValue.trim().toLowerCase();
     this.currentPageData = this.dataSource.filteredData
-    this.initPageFilter();
+
+    if(filterValue === ""){
+      this.initPageFilter();
+    }
   } 
 
   onPageChange(event: any) {
